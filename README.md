@@ -9,6 +9,7 @@
 https://youtu.be/GdhtmaLD4Vs
 ### 操作方法
 可參考影片<br>
-下載全部專案<br>
+下載全部專案及.exe檔<br>
+https://drive.google.com/drive/folders/1bZPZCvI2EE0izyaY7J6MrgfhdXw-42Lf?usp=sharing<br>
 使用main.exe運行<br>
 也可使用main.py運行(裡面是程式碼)<br>
