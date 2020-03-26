@@ -13,3 +13,5 @@ https://youtu.be/GdhtmaLD4Vs
 https://drive.google.com/drive/folders/1bZPZCvI2EE0izyaY7J6MrgfhdXw-42Lf?usp=sharing<br>
 使用main.exe運行<br>
 也可使用main.py運行(裡面是程式碼)<br>
+### 流程
+https://imgur.com/GWwJ25r
