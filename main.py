@@ -1,7 +1,5 @@
 import os
 from datetime import time
-
-import self as self
 from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.QtCore import QRect
 from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow
@@ -48,10 +46,10 @@ class MainWindow(QMainWindow):
         self.setWindowTitle('stock in the game')
         self.user_id = None
 
-        self.main_ui.loginpushButton.clicked.connect(self.loginEvent)
+        self.main_ui.loginpushButton.clicked.connect(self.login_event)
         self.main_ui.createaccountpushButton.clicked.connect(self.connect_createaccount)
 
-    def loginEvent(self):
+    def login_event(self):
         self.user_id = self.main_ui.userlineEdit.text()
         # login_user = select * from usertable where ID = self.main_ui.userlineEdit.text()
         self.user_password = self.main_ui.passwordlineEdit.text()
@@ -75,7 +73,7 @@ class MainWindow(QMainWindow):
 
     def connect_errorDialog(self):
         self.w = errorDialog()
-        self.w.setGeometry(QRect(100, 100, 450,250))
+        self.w.setGeometry(QRect(100, 100, 450, 250))
         self.w.errorDialog_ui.label.setText("帳號密碼錯誤")
         self.w.show()
 
@@ -125,7 +123,7 @@ class OGCDialog(QDialog):
     def mainDialog(self):
         self.setMinimumSize(700, 467)
         self.setWindowIcon(QtGui.QIcon('picture/icon.png'))
-        self.resize(700,467)
+        self.resize(700, 467)
         image = QtGui.QPixmap()
         image.load('picture/serval.jpg')
         image = image.scaled(self.width(), self.height())
@@ -153,10 +151,10 @@ class createaccount(QMainWindow):
         palette.setBrush(self.backgroundRole(), QtGui.QBrush(image))
         self.setPalette(palette)
         self.setWindowTitle('stock in the game')
-        self.main_ui.confirmpushButton.clicked.connect(self.createEvent)
+        self.main_ui.confirmpushButton.clicked.connect(self.create_event)
         self.main_ui.cancelpushButton.clicked.connect(self.connectmainWindow)
 
-    def createEvent(self):
+    def create_event(self):
         os.listdir()
         user_id = self.main_ui.userlineEdit.text()
 
@@ -186,7 +184,7 @@ class createaccount(QMainWindow):
         self.main_ui.confirmpushButton.clicked.connect(self.main_ui.confirmpasswordlineEdit.clear)
         self.w = errorDialog()
         self.w.errorDialog_ui.label.setText("密碼與確認密碼不同")
-        self.w.setGeometry(QRect(100, 100, 450,250))
+        self.w.setGeometry(QRect(100, 100, 450, 250))
         self.w.show()
 
     def connect_errorDialog_same_id(self):
@@ -195,7 +193,7 @@ class createaccount(QMainWindow):
         self.main_ui.confirmpushButton.clicked.connect(self.main_ui.confirmpasswordlineEdit.clear)
         self.w = errorDialog()
         self.w.errorDialog_ui.label.setText("已經有此帳號")
-        self.w.setGeometry(QRect(100, 100, 450,250))
+        self.w.setGeometry(QRect(100, 100, 450, 250))
         self.w.show()
 
     def connect_errorDialog_length_mistake(self):
@@ -204,7 +202,7 @@ class createaccount(QMainWindow):
         self.main_ui.confirmpushButton.clicked.connect(self.main_ui.confirmpasswordlineEdit.clear)
         self.w = errorDialog()
         self.w.errorDialog_ui.label.setText("帳號密碼要輸入")
-        self.w.setGeometry(QRect(100, 100, 450,250))
+        self.w.setGeometry(QRect(100, 100, 450, 250))
         self.w.show()
 
     def connectmainWindow(self):
@@ -269,13 +267,13 @@ class EditWindow(QMainWindow):
         palette = QtGui.QPalette()
         palette.setBrush(self.backgroundRole(), QtGui.QBrush(image))
         self.setPalette(palette)
-        self.setWindowTitle("the winter is comming")
+        self.setWindowTitle("the winter is coming")
         self.main_ui.confirmpushButton.setShortcut('Return')
         self.main_ui.cancelpushButton.clicked.connect(self.connect_menuWindow)
-        self.main_ui.confirmpushButton.clicked.connect(self.editEvent)
+        self.main_ui.confirmpushButton.clicked.connect(self.edit_event)
         self.main_ui.userlineEdit.setText(user_id)
 
-    def editEvent(self):
+    def edit_event(self):
 
         user_password = self.main_ui.passwordlineEdit.text()
         user_password_confirm = self.main_ui.confirmpasswordlineEdit.text()
@@ -313,13 +311,13 @@ class EditWindow(QMainWindow):
     def connect_errorDialog_length_mistake(self):
         self.w = errorDialog()
         self.w.errorDialog_ui.label.setText("密碼要輸入")
-        self.w.setGeometry(QRect(100, 100, 450,250))
+        self.w.setGeometry(QRect(100, 100, 450, 250))
         self.w.show()
 
     def connect_errorDialog(self):
         self.w = errorDialog()
         self.w.errorDialog_ui.label.setText("密碼與確認密碼不同")
-        self.w.setGeometry(QRect(100, 100, 450,250))
+        self.w.setGeometry(QRect(100, 100, 450, 250))
         self.w.show()
 
     def connect_menuWindow(self):
