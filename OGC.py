@@ -6,8 +6,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtWidgets
 
 
 class Ui_errorDialog(object):
@@ -19,12 +18,11 @@ class Ui_errorDialog(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.label = QtWidgets.QLabel(errorDialog)
         self.label.setObjectName("label")
-        self.horizontalLayout.addWidget(self.label, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignTop)
-
+        self.horizontalLayout.addWidget(self.label, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignTop)
         self.retranslateUi(errorDialog)
         QtCore.QMetaObject.connectSlotsByName(errorDialog)
 
     def retranslateUi(self, errorDialog):
         _translate = QtCore.QCoreApplication.translate
         errorDialog.setWindowTitle(_translate("errorDialog", "Dialog"))
-        self.label.setText(_translate("errorDialog", "打手槍按ok"))
+        self.label.setText(_translate("errorDialog", "訊息"))

@@ -6,8 +6,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtCore, QtWidgets
 
 
 class Ui_OGC2(object):
@@ -18,13 +17,12 @@ class Ui_OGC2(object):
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.label = QtWidgets.QLabel(OGC2)
         self.label.setObjectName("label")
-        self.horizontalLayout.addWidget(self.label, 0, QtCore.Qt.AlignHCenter|QtCore.Qt.AlignVCenter)
+        self.horizontalLayout.addWidget(self.label, 0, QtCore.Qt.AlignHCenter | QtCore.Qt.AlignVCenter)
         self.buttonBox = QtWidgets.QDialogButtonBox(OGC2)
         self.buttonBox.setOrientation(QtCore.Qt.Vertical)
-        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel|QtWidgets.QDialogButtonBox.Ok)
+        self.buttonBox.setStandardButtons(QtWidgets.QDialogButtonBox.Cancel | QtWidgets.QDialogButtonBox.Ok)
         self.buttonBox.setObjectName("buttonBox")
         self.horizontalLayout.addWidget(self.buttonBox)
-
         self.retranslateUi(OGC2)
         self.buttonBox.accepted.connect(OGC2.accept)
         self.buttonBox.rejected.connect(OGC2.reject)
@@ -33,4 +31,4 @@ class Ui_OGC2(object):
     def retranslateUi(self, OGC2):
         _translate = QtCore.QCoreApplication.translate
         OGC2.setWindowTitle(_translate("OGC2", "Dialog"))
-        self.label.setText(_translate("OGC2", "hello bitch"))
+        self.label.setText(_translate("OGC2", "訊息"))

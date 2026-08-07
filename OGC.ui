@@ -20,7 +20,7 @@
    <item alignment="Qt::AlignHCenter|Qt::AlignTop">
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>打手槍按ok</string>
+      <string>訊息</string>
      </property>
     </widget>
    </item>
