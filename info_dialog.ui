@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>OGC2</class>
- <widget class="QDialog" name="OGC2">
+ <class>InfoDialog</class>
+ <widget class="QDialog" name="InfoDialog">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -38,7 +38,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>accepted()</signal>
-   <receiver>OGC2</receiver>
+   <receiver>InfoDialog</receiver>
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel"><x>248</x><y>254</y></hint>
@@ -48,7 +48,7 @@
   <connection>
    <sender>buttonBox</sender>
    <signal>rejected()</signal>
-   <receiver>OGC2</receiver>
+   <receiver>InfoDialog</receiver>
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel"><x>316</x><y>260</y></hint>

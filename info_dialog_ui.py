@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'OGC2.ui'
+# Form implementation generated from reading ui file 'info_dialog.ui'
 #
 # Created by: PyQt5 UI code generator 5.14.1
 #
@@ -9,7 +9,7 @@
 from PyQt5 import QtCore, QtWidgets
 
 
-class Ui_OGC2(object):
+class Ui_InfoDialog(object):
     def setupUi(self, OGC2):
         OGC2.setObjectName("OGC2")
         OGC2.resize(400, 300)

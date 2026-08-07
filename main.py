@@ -8,13 +8,13 @@ from PyQt5 import QtCore, QtGui
 from PyQt5.QtCore import QRect
 from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow
 
-from OGC import Ui_errorDialog
-from OGC2 import Ui_OGC2
+from error_dialog_ui import Ui_ErrorDialog
+from info_dialog_ui import Ui_InfoDialog
 from auth import AuthService, UserAlreadyExists, UserStore, ValidationError
-from createaccount import Ui_createaccount
-from editpassword import Ui_editpasswordWindow
-from mainOGC import Ui_MainWindow
-from menuOGC import Ui_MenuWindow
+from create_account_ui import Ui_CreateAccountWindow
+from edit_password_ui import Ui_EditPasswordWindow
+from login_window_ui import Ui_LoginWindow
+from menu_window_ui import Ui_MenuWindow
 
 BASE_DIR = Path(__file__).resolve().parent
 ASSET_DIR = BASE_DIR / "picture"
@@ -42,7 +42,7 @@ def _apply_background(widget, image_name: str) -> None:
 class ErrorDialog(QDialog):
     def __init__(self, message: str):
         super().__init__()
-        self.ui = Ui_errorDialog()
+        self.ui = Ui_ErrorDialog()
         self.ui.setupUi(self)
         self.setMaximumSize(400, 250)
         self.setWindowTitle("錯誤")
@@ -55,7 +55,7 @@ class ErrorDialog(QDialog):
 class InfoDialog(QDialog):
     def __init__(self, message: str, title: str = "完成"):
         super().__init__()
-        self.ui = Ui_OGC2()
+        self.ui = Ui_InfoDialog()
         self.ui.setupUi(self)
         self.setMinimumSize(700, 467)
         self.resize(700, 467)
@@ -96,7 +96,7 @@ class AppWindow(QMainWindow):
 class MainWindow(AppWindow):
     def __init__(self, auth: AuthService):
         super().__init__(auth)
-        self.ui = Ui_MainWindow()
+        self.ui = Ui_LoginWindow()
         self.ui.setupUi(self)
         self.setWindowTitle("Stock in the Game")
         self.setWindowIcon(QtGui.QIcon(_asset("winniethepool.jpg")))
@@ -127,7 +127,7 @@ class MainWindow(AppWindow):
 class CreateAccountWindow(AppWindow):
     def __init__(self, auth: AuthService):
         super().__init__(auth)
-        self.ui = Ui_createaccount()
+        self.ui = Ui_CreateAccountWindow()
         self.ui.setupUi(self)
         self.setWindowTitle("建立帳號")
         self.setWindowIcon(QtGui.QIcon(_asset("icon.png")))
@@ -181,7 +181,7 @@ class EditPasswordWindow(AppWindow):
     def __init__(self, auth: AuthService, user_id: str):
         super().__init__(auth)
         self.user_id = user_id
-        self.ui = Ui_editpasswordWindow()
+        self.ui = Ui_EditPasswordWindow()
         self.ui.setupUi(self)
         self.setWindowTitle("修改密碼")
         self.setWindowIcon(QtGui.QIcon(_asset("icon.png")))
