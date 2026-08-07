@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'OGC.ui'
+# Form implementation generated from reading ui file 'error_dialog.ui'
 #
 # Created by: PyQt5 UI code generator 5.14.1
 #
@@ -9,7 +9,7 @@
 from PyQt5 import QtCore, QtWidgets
 
 
-class Ui_errorDialog(object):
+class Ui_ErrorDialog(object):
     def setupUi(self, errorDialog):
         errorDialog.setObjectName("errorDialog")
         errorDialog.resize(459, 300)

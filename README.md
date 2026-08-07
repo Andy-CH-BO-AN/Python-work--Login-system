@@ -26,7 +26,7 @@
 - 交易紀錄
 - 庫存與損益資料
 
-這部分目前保留在 `legacy_cmoney.py` 作為歷史紀錄。它依賴第三方網站當年的 HTML / endpoint 行為，**不視為目前仍受支援或可直接執行的 production integration**。
+這部分目前保留在 `legacy_cmoney.py` 作為歷史紀錄。它依賴第三方網站當年的 HTML / endpoint 行為，**不視為目前仍受支援或可直接執行的 production integration**。若要嘗試執行，登入資訊必須透過 `CMONEY_USER_ID`、`CMONEY_PASSWORD`、`CMONEY_ACCOUNT_NAME` 環境變數提供，repository 不保存個人登入資訊或 account identifier。
 
 ## 原始操作影片
 
@@ -110,12 +110,12 @@ GitHub 仍可能暫時保留 unreachable objects，已知舊 SHA 在 garbage col
 │   └── ... historical UI assets
 ├── main.py
 ├── legacy_cmoney.py
-├── mainOGC.py / mainOGC.ui
-├── createaccount.py / createaccount.ui
-├── editpassword.py / editpassword.ui
-├── menuOGC.py / menuOGC.ui
-├── OGC.py / OGC.ui
-├── OGC2.py / OGC2.ui
+├── login_window_ui.py / login_window.ui
+├── create_account_ui.py / create_account.ui
+├── edit_password_ui.py / edit_password.ui
+├── menu_window_ui.py / menu_window.ui
+├── error_dialog_ui.py / error_dialog.ui
+├── info_dialog_ui.py / info_dialog.ui
 └── requirements.txt
 ```
 
